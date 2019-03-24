@@ -22,10 +22,21 @@ public class MainActivity extends AppCompatActivity
         displayCounter(mViewModel.currentCounter);
     }
 
-    //Increments counter by 1, used in onClick property of btn1
+    //Increments counter by 1, used in onClick property of btnUp
     public void incrementCounter(View v)
     {
         mViewModel.currentCounter = mViewModel.currentCounter + 1;
+        displayCounter(mViewModel.currentCounter);
+    }
+
+    //Decrements counter by 1. If counter value is negative, sets value to 0
+    public void decrementCounter(View v)
+    {
+        mViewModel.currentCounter = mViewModel.currentCounter - 1;
+        if (mViewModel.currentCounter < 0)
+        {
+           mViewModel.currentCounter = 0;
+        }
         displayCounter(mViewModel.currentCounter);
     }
 

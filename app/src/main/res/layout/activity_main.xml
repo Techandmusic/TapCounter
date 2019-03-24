@@ -13,25 +13,47 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/medium_spacing"
-        android:layout_marginBottom="@dimen/large_spacing"
+        android:layout_marginBottom="@dimen/medium_spacing"
         android:textSize="@dimen/large_text"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btn1"
+    <LinearLayout
+        android:id="@+id/counterButtons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/display"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/small_spacing"
-        android:onClick="incrementCounter"
-        android:text="COUNT" />
+        android:layout_marginLeft="@dimen/small_spacing"
+        android:layout_marginRight="@dimen/small_spacing"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_spacing"
+            android:layout_marginRight="@dimen/small_spacing"
+            android:onClick="incrementCounter"
+            android:text="@string/up" />
+
+        <Button
+            android:id="@+id/btnDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_spacing"
+            android:onClick="decrementCounter"
+            android:text="@string/down" />
+
+
+    </LinearLayout>
+
+
 
     <Button
         android:id="@+id/btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn1"
+        android:layout_below="@id/counterButtons"
         android:layout_centerHorizontal="true"
         android:onClick="resetCounter"
         android:text="RESET" />

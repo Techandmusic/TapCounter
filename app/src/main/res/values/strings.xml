@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Tap Counter</string>
+    <string name="up">INCREMENT</string>
+    <string name="down">DECREMENT</string>
 </resources>
